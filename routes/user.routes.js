@@ -6,7 +6,6 @@ const UserModel = require("../models/User.model");
 router.post("/signup", async (req, res) => {
   try {
     const createdUser = await UserModel.create(req.body);
-
     return res.status(201).json(createdUser);
   } catch (err) {
     console.log(err);
