@@ -13,6 +13,9 @@ app.use("/user", userRouter);
 const topicRouter = require("./routes/topic.routes");
 app.use("/topic", topicRouter);
 
+const answerRouter = require("./routes/answer.routes");
+app.use("/answer", answerRouter);
+
 app.listen(Number(process.env.PORT), () => {
   console.log("Server up and running at port:", process.env.PORT);
 });
